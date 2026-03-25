@@ -91,8 +91,8 @@ What OpenHands actually does:
 What to pitch (specific to their context):
 - DevSecOps: "automate security fixes in code"
 - Platform teams: "scale to 1000s of agents"
-- Managers: "add team capacity without adding risk"
-- Financial services: "autonomous AI agents, sandboxed, locally hosted on internal infrastructure"
+- Managers: "your team designs the agents, we provide the platform"
+- Financial services: "coding agent platform, air-gapped and sandboxed, designed by your team and customized to your infrastructure preferences"
 
 ### Better Hooks
 - Questions work better than statements: "How was your first year as...?"
@@ -144,11 +144,20 @@ A 2025 analysis revealed 84% of AI-written business emails get no response. Key 
 
 ## Writing Guidelines
 
+### Core Principle: BESPOKE NOT TEMPLATE
+Every email must be unique. Read the profile fresh. Write specifically for this person.
+
 ### Structure (in order)
-1. **Personalized Hook** - Use ONE deep inference from their profile, not surface-level observation
-2. **Context** - Briefly acknowledge the situation (no response received)
-3. **Value Anchor** - Social proof: "100% OSS", "work with large enterprises", or domain-specific differentiators
-4. **Binary CTA** - Two clear options, no more
+1. **Name + Hook** - Start with their name, then a fragment that shows you understand their world
+2. **What is it** - Directly name and describe what OpenHands is for them
+3. **CTA** - Two clear options
+
+**Key lesson:** Don't separate "context" (I've reached out a few times) as its own line. Combine everything into a natural flow.
+
+**Format rules:**
+- No em dashes
+- No AI-isms ("I hope this email finds you well", "I'm reaching out to...")
+- Name, then first sentence - not "Name - sentence"
 
 ### Production Monitoring (Optional)
 
