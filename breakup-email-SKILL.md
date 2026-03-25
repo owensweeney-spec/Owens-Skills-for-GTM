@@ -1,6 +1,15 @@
 ---
 name: breakup-email
-description: Write a concise, personalized breakup email (80 words or less) for a prospect you've been emailing. Uses a persistent memory file to track learnings from previous emails. Includes one personalized hook with deeper inference from profile, and one binary CTA. Mention a relevant existing customer from the menu (Apple, AMD, Nvidia, Wix, Proctor and Gamble, Okta). Avoid corporate speak and em dashes.
+description: Write a concise, personalized breakup email (80 words or less) for a prospect you've been emailing. Uses a persistent memory file to track learnings from previous emails. Includes one personalized hook with deeper inference from profile, and one binary CTA. Avoid corporate speak, em dashes, and AI-isms. 100% OSS, works with large enterprises.
+triggers:
+  - "write breakup email"
+  - "breakup email for prospect"
+  - "last attempt email"
+  - "goodbye email to prospect"
+  - "stop reaching out email"
+  - "final follow up email"
+  - "no response follow up"
+  - "generate breakup email"
 ---
 
 # Breakup Email Skill
@@ -71,40 +80,24 @@ For each prospect, analyze their profile to infer:
 
 ### OpenHands Research (MUST DO BEFORE PRINTING)
 
-Before writing ANY email about OpenHands:
+What OpenHands actually does:
+- AI coding agent for complex engineering tasks
+- SDK: composable Python library to define agents in code
+- CLI: like Claude Code or Codex, powered by Claude, GPT, or any LLM
+- Cloud: hosted with Slack, Jira, Linear integrations
+- Enterprise: self-hosted on Kubernetes
+- 100% OSS, works with large enterprises
 
-1. **Check the GitHub repo** - OpenHands has 69K+ stars, it's an AI-driven development platform
-2. **Read the docs** - Understand the product's actual capabilities
-3. **Know what it IS and IS NOT** - Don't pitch what it doesn't do
+What to pitch (specific to their context):
+- DevSecOps: "automate security fixes in code"
+- Platform teams: "scale to 1000s of agents"
+- Managers: "add team capacity without adding risk"
+- Financial services: "autonomous AI agents, sandboxed, locally hosted on internal infrastructure"
 
-**What OpenHands actually does:**
-- AI coding agent that works on complex engineering tasks
-- Has SDK (Software Agent SDK) - composable Python library to define agents in code
-- Has CLI - like Claude Code or Codex, powered by Claude, GPT, or any LLM
-- Has Local GUI - like Devin or Jules
-- Has Cloud - hosted with Slack, Jira, Linear integrations
-- Has Enterprise - self-hosted on Kubernetes
-- SWEBench score: 77.6%
-
-**What to pitch (specific to their context):**
-- For DevSecOps: "automate security fixes in code"
-- For platform teams: "scale to 1000s of agents in the cloud"
-- For managers: "accelerate engineering velocity without adding headcount"
-- For ICs: "work on complex tasks that would take hours"
-- For enterprise leaders: "bring agents to legacy systems without risks"
-- For financial services: "autonomous AI agents, sandboxed, locally hosted on internal infrastructure"
-- Add social proof when possible: "100% OSS", "work with large healthcare/banking orgs"
-
-**Better hooks:**
+### Better Hooks
 - Questions work better than statements: "How was your first year as...?"
-- Shows genuine curiosity, not a sales pitch in disguise
-- "I imagine..." works for assumptions - frames it as speculation not fact
-- If you don't have enough info to personalize, DON'T. Be honest: "I don't know the specifics of your work at..."
-
-**When to NOT pitch:**
-- If their profile gives you nothing to work with (no posts, no content, no clear signal)
-- Don't force personalization. It's worse to fake it than to admit you don't know.
-- Consider just being honest: "This is a last attempt. If not interested, I won't reach out again."
+- "I imagine..." frames assumptions as speculation, not fact
+- If you don't have enough info to personalize, DON'T. Be honest.
 
 **Voice check:**
 - Would THIS person think "another vendor who doesn't get it" or "this person actually understands my world?"
@@ -154,8 +147,17 @@ A 2025 analysis revealed 84% of AI-written business emails get no response. Key 
 ### Structure (in order)
 1. **Personalized Hook** - Use ONE deep inference from their profile, not surface-level observation
 2. **Context** - Briefly acknowledge the situation (no response received)
-3. **Value Anchor** - Mention a relevant customer from the menu, ideally one that matches their industry or concerns
+3. **Value Anchor** - Social proof: "100% OSS", "work with large enterprises", or domain-specific differentiators
 4. **Binary CTA** - Two clear options, no more
+
+### Production Monitoring (Optional)
+
+If using in production, consider logging:
+- Which hooks worked vs didn't
+- Response rates by industry/role
+- Time to first response
+
+This helps iterate on the skill over time.
 
 ### Recipient Perspective Check (MUST DO BEFORE PRINTING)
 

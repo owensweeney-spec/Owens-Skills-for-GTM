@@ -1,0 +1,9 @@
+# Dependencies
+scripts/email_memory.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
