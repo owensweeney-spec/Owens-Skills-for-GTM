@@ -92,13 +92,62 @@ Before writing ANY email about OpenHands:
 - For managers: "accelerate engineering velocity without adding headcount"
 - For ICs: "work on complex tasks that would take hours"
 - For enterprise leaders: "bring agents to legacy systems without risks"
+- For financial services: "autonomous AI agents, sandboxed, locally hosted on internal infrastructure"
 - Add social proof when possible: "100% OSS", "work with large healthcare/banking orgs"
 
 **Better hooks:**
 - Questions work better than statements: "How was your first year as...?"
 - Shows genuine curiosity, not a sales pitch in disguise
+- "I imagine..." works for assumptions - frames it as speculation not fact
+- If you don't have enough info to personalize, DON'T. Be honest: "I don't know the specifics of your work at..."
 
-NEVER use generic "AI coding tool" pitch. Be specific about what OpenHands actually enables.
+**When to NOT pitch:**
+- If their profile gives you nothing to work with (no posts, no content, no clear signal)
+- Don't force personalization. It's worse to fake it than to admit you don't know.
+- Consider just being honest: "This is a last attempt. If not interested, I won't reach out again."
+
+**Voice check:**
+- Would THIS person think "another vendor who doesn't get it" or "this person actually understands my world?"
+- If it sounds like it could be a template with name swapped, REWRITE
+- Eliminate any phrase you could put in front of ANY person
+
+## Why AI-Generated Emails Fail (Research-Based)
+
+A 2025 analysis revealed 84% of AI-written business emails get no response. Key reasons:
+
+**AI-isms and Clichés to avoid:**
+- "I hope this email finds you well"
+- "I'm reaching out to..."
+- "Please don't hesitate to contact me"
+- "Just checking in"
+- "Following up on my previous email"
+- These instantly signal automation and feel insincere
+
+**Lack of genuine personalization:**
+- Deep, meaningful personalization beyond name merge
+- Reference something specific only THEY would understand
+
+**Bloated and indirect tone:**
+- Wordy sentences that lack impact
+- Filler words and "bloated" language
+- Be concise and direct
+
+**Absence of human emotion and context:**
+- Can't replicate emotional nuance or shared history
+- Messages feel "transactional" and "canned"
+
+**Overuse of structure:**
+- Don't rely on bullet points and formulaic structures
+- Natural conversational flows work better
+
+**Inaccuracy and hallucination:**
+- Never reference something you didn't actually see on their profile
+- If you can't verify it, don't say it
+
+**How to fix:**
+- Use AI as a starting point, not final product
+- Rewrite in your own voice
+- Add specific context only this person would recognize
 
 ## Writing Guidelines
 
@@ -135,7 +184,7 @@ The value prop must be rewritten for each person based on:
 - Their role (IC vs manager vs exec)
 - Their company's pressure points (startup = speed, enterprise = integration)
 
-### First Principles Writing
+## First Principles Writing
 
 Before writing ANY email, ask:
 
@@ -155,8 +204,12 @@ Before writing ANY email, ask:
 - Insurance engineer: Claims can't go down, ever
 - Healthcare engineer: Compliance, audit trails
 - Finance engineer: Production trading systems
-- Startup engineer: Move fast, wear many hats
-- Enterprise engineer: Integration, existing architecture
+- Bloomberg engineer: Terminal systems that move markets
+
+**When you have NO signal (no posts, no content):**
+- Use what you know from their tenure/role
+- Reference their technical background if they have one
+- Don't pretend to know their challenges - state what you KNOW from the profile
 
 Write the email to THIS person, not to a persona.
 
