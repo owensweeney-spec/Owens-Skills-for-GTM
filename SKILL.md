@@ -1,96 +1,96 @@
 ---
 name: human_outreach_drafts
-description: This skill should be used when the user asks to "draft a LinkedIn DM", "write an outreach email", "create a sales message", "write a cold email", or "compose a prospect message". Creates human-sounding, mobile-friendly outreach drafts with specific tense patterns and pilot suggestions.
+description: Esta habilidad debe usarse cuando el usuario pida "redactar un DM de LinkedIn", "escribir un correo de prospección", "crear un mensaje de ventas", "escribir un correo en frío", o "componer un mensaje para un prospecto". Crea borradores de prospección que suenan humanos, optimizados para móvil, con patrones de tiempo verbal específicos y sugerencias de pilotos.
 ---
 
-# Human Outreach Drafts
+# Borradores de Prospección Humana
 
-Draft short, human-sounding LinkedIn DMs and emails tailored to a specific person's background, with a small, low-risk pilot suggestion and a clear, easy reply.
+Redacta DMs de LinkedIn y correos cortos que suenen humanos, adaptados al perfil específico de una persona, con una pequeña sugerencia de piloto de bajo riesgo y una respuesta clara y fácil.
 
-## Inputs
+## Entradas
 
-- Prospect profile summary (role, company, stack, recent activity)
-- Product summary (1-2 sentences)
-- Constraints (length, tone, forbidden phrases, preferred tenses)
-- Feedback notes from past iterations
+- Resumen del perfil del prospecto (rol, empresa, stack tecnológico, actividad reciente)
+- Resumen del producto (1-2 oraciones)
+- Restricciones (longitud, tono, frases prohibidas, tiempos verbales preferidos)
+- Notas de retroalimentación de iteraciones pasadas
 
-## Outputs
+## Salidas
 
-- Email draft (mobile-friendly, ~110 words max)
-- LinkedIn DM draft (~75 words max)
-- One-line subject suggestion (optional)
-- "Why this fits" summary (1-2 sentences, internal only)
+- Borrador de correo (optimizado para móvil, ~110 palabras máximo)
+- Borrador de DM de LinkedIn (~75 palabras máximo)
+- Sugerencia de asunto de una línea (opcional)
+- Resumen de "Por qué funciona" (1-2 oraciones, solo uso interno)
 
-## Core Instructions
+## Instrucciones Principales
 
-Write as a human sales rep addressing a specific person. Use their role, stack, and recent activity to pick one small, low-risk pilot. Keep it short and natural.
+Escribe como un representante de ventas humano dirigiéndose a una persona específica. Usa su rol, stack tecnológico y actividad reciente para elegir un piloto pequeño y de bajo riesgo. Mantén todo corto y natural.
 
-### Required Tense Patterns
+### Patrones de Tiempo Verbal Requeridos
 
-- **Past observation**: "Saw your post about…"
-- **Present rationale**: "Since you're focused on…"
-- **Conditional suggestion**: "A good first thing to try could be…"
-- **Modal future**: "You could have it…"
-- **Habitual present**: "This usually takes 1-2 hours…"
+- **Observación pasada**: "Vi tu publicación sobre…"
+- **Justificación presente**: "Como estás enfocado en…"
+- **Sugerencia condicional**: "Una buena primera cosa para probar podría ser…"
+- **Futuro modal**: "Podrías tenerlo…"
+- **Presente habitual**: "Esto normalmente toma 1-2 horas…"
 
-End with a simple, low-pressure question.
+Termina con una pregunta simple y sin presión.
 
-### Hard Rules
+### Reglas Estrictas
 
-- No bullets
-- No em dashes
-- No "AI-ish" phrases: "I'll keep this short," "if that's useful," "happy to," "just"
-- Avoid corporate phrasing: "optimize," "leverage," "synergy"
-- Avoid repeating the product name more than once
+- Sin viñetas
+- Sin guiones largos
+- Sin frases "de IA": "seré breve," "si te resulta útil," "encantado de," "solo"
+- Evita jerga corporativa: "optimizar," "aprovechar," "sinergia"
+- Evita repetir el nombre del producto más de una vez
 
-### Soft Rules
+### Reglas Flexibles
 
-- One concrete pilot idea tied to their role and stack
-- Make the connection to their world explicit in one clause
-- Keep email under ~110 words, LinkedIn under ~75 words
-- Avoid over-explaining the product
+- Una idea de piloto concreta vinculada a su rol y stack
+- Haz explícita la conexión con su mundo en una cláusula
+- Mantén el correo en ~110 palabras, LinkedIn en ~75 palabras
+- Evita explicar demasiado el producto
 
-## Pilot Idea Library
+## Biblioteca de Ideas de Pilotos
 
-Select the smallest pilot that matches their world:
+Selecciona el piloto más pequeño que coincida con su mundo:
 
-- Release-readiness checklist
-- Incident handoff / runbook capture
-- Repo readiness / onboarding checklist
-- Data-quality or validation workflow
-- Migration readiness checklist
+- Lista de verificación de preparación para lanzamiento
+- Traspaso de incidentes / captura de runbooks
+- Preparación de repositorios / lista de verificación de onboarding
+- Flujo de trabajo de calidad o validación de datos
+- Lista de verificación de preparación para migración
 
-## Quality Checks
+## Verificaciones de Calidad
 
-Before outputting, verify:
+Antes de producir el resultado, verifica:
 
-- First sentence references their context
-- Pilot idea maps to their stack or responsibilities
-- Single clear ask exists
-- Reads naturally out loud
-- No banned phrases present
-- No "AI-ish" symmetry or filler
+- La primera oración hace referencia a su contexto
+- La idea de piloto se alinea con su stack o responsabilidades
+- Existe una sola pregunta clara
+- Se lee naturalmente en voz alta
+- No hay frases prohibidas presentes
+- No hay simetría ni relleno "de IA"
 
-## Continuous Improvement
+## Mejora Continua
 
-After each user edit:
-1. Capture the edit and classify why it was better (tone, length, specificity, phrasing, structure)
-2. Update "Do / Don't" memory list
-3. Add or remove phrases from banned list
-4. Track successful replies and feed openings/closings into templates
-5. Maintain preferred tense pattern and enforce in future drafts
+Después de cada edición del usuario:
+1. Captura la edición y clasifica por qué fue mejor (tono, longitud, especificidad, redacción, estructura)
+2. Actualiza la lista de memoria "Hacer / No hacer"
+3. Añade o elimina frases de la lista de prohibidas
+4. Rastrea las respuestas exitosas y alimenta las aperturas/cierres en plantillas
+5. Mantén el patrón de tiempo verbal preferido y aplícalo en futuros borradores
 
-## Data to Store
+## Datos a Almacenar
 
-Maintain lightweight memory of:
-- Preferred phrases (what to keep)
-- Rejected phrases (what to remove)
-- Word count targets
-- Top 3 pilot ideas that get replies
-- Tone tags: direct, neutral, warm, pragmatic
+Mantén una memoria ligera de:
+- Frases preferidas (qué mantener)
+- Frases rechazadas (qué eliminar)
+- Objetivos de conteo de palabras
+- Top 3 ideas de pilotos que obtienen respuestas
+- Etiquetas de tono: directo, neutral, cálido, pragmático
 
-## Reference Files
+## Archivos de Referencia
 
-- `references/pilot_ideas.md` - Detailed pilot idea descriptions and when to use each
-- `references/tense_patterns.md` - Examples of each tense pattern in context
-- `references/ banned_phrases.md` - Comprehensive list of phrases to avoid
+- `references/pilot_ideas.md` - Descripciones detalladas de ideas de pilotos y cuándo usar cada una
+- `references/tense_patterns.md` - Ejemplos de cada patrón de tiempo verbal en contexto
+- `references/banned_phrases.md` - Lista completa de frases a evitar

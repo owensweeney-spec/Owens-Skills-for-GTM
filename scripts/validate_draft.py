@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Validation script for human_outreach_drafts skill.
-Enforces: no em dashes, no bullets, no banned phrases.
+Script de validación para la habilidad human_outreach_drafts.
+Aplica: sin guiones largos, sin viñetas, sin frases prohibidas.
 """
 
 import re
 import sys
 from pathlib import Path
 
-# Banned phrases (case-insensitive)
+# Frases prohibidas (sin distinción de mayúsculas/minúsculas)
 BANNED_PHRASES = [
     "i'll keep this short",
     "if that's useful",
@@ -46,31 +46,31 @@ BANNED_PHRASES = [
 ]
 
 def check_em_dashes(text: str) -> list:
-    """Check for em dashes."""
-    # Match em dash (—), en dash (–), or double hyphen (--)
+    """Verifica guiones largos."""
+    # Busca guion largo (—), guion medio (–), o guion doble (--)
     pattern = r'[\u2014\u2013--]'
     matches = re.findall(pattern, text)
     return matches
 
 def check_bullets(text: str) -> list:
-    """Check for bullet points."""
+    """Verifica viñetas."""
     lines = text.split('\n')
     bullet_lines = []
     for i, line in enumerate(lines, 1):
-        # Match common bullet patterns
+        # Busca patrones comunes de viñetas
         if re.match(r'^[\s]*[-*•]\s+', line):
             bullet_lines.append((i, line.strip()))
     return bullet_lines
 
 def check_banned_phrases(text: str) -> list:
-    """Check for banned phrases (case-insensitive)."""
+    """Verifica frases prohibidas (sin distinción de mayúsculas/minúsculas)."""
     text_lower = text.lower()
     found = []
     for phrase in BANNED_PHRASES:
         if phrase in text_lower:
-            # Find position
+            # Encuentra posición
             pos = text_lower.find(phrase)
-            # Get context
+            # Obtiene contexto
             start = max(0, pos - 20)
             end = min(len(text), pos + len(phrase) + 20)
             context = text[start:end].replace('\n', ' ')
@@ -78,68 +78,68 @@ def check_banned_phrases(text: str) -> list:
     return found
 
 def check_word_count(text: str, max_words: int, label: str) -> bool:
-    """Check if text is under word limit."""
+    """Verifica si el texto está bajo el límite de palabras."""
     words = text.split()
     count = len(words)
     if count > max_words:
-        print(f"  ⚠️  {label}: {count} words (max {max_words})")
+        print(f"  ⚠️  {label}: {count} palabras (máx {max_words})")
         return False
-    print(f"  ✓ {label}: {count} words")
+    print(f"  ✓ {label}: {count} palabras")
     return True
 
-def validate_draft(text: str, label: str = "Draft") -> bool:
-    """Validate a single draft."""
-    print(f"\nValidating: {label}")
+def validate_draft(text: str, label: str = "Borrador") -> bool:
+    """Valida un solo borrador."""
+    print(f"\nValidando: {label}")
     print("-" * 40)
     
     errors = []
     
-    # Check em dashes
+    # Verifica guiones largos
     em_dashes = check_em_dashes(text)
     if em_dashes:
-        errors.append(f"Found {len(em_dashes)} em dash(es)")
-        print(f"  ❌ Em dashes found: {len(em_dashes)}")
+        errors.append(f"Se encontraron {len(em_dashes)} guion(es) largo(s)")
+        print(f"  ❌ Guiones largos encontrados: {len(em_dashes)}")
     
-    # Check bullets
+    # Verifica viñetas
     bullets = check_bullets(text)
     if bullets:
-        errors.append(f"Found {len(bullets)} bullet point(s)")
-        print(f"  ❌ Bullets found: {len(bullets)}")
+        errors.append(f"Se encontraron {len(bullets)} viñeta(s)")
+        print(f"  ❌ Viñetas encontradas: {len(bullets)}")
         for line_num, line in bullets:
-            print(f"     Line {line_num}: {line[:50]}...")
+            print(f"     Línea {line_num}: {line[:50]}...")
     
-    # Check banned phrases
+    # Verifica frases prohibidas
     banned = check_banned_phrases(text)
     if banned:
-        errors.append(f"Found {len(banned)} banned phrase(s)")
-        print(f"  ❌ Banned phrases: {len(banned)}")
+        errors.append(f"Se encontraron {len(banned)} frase(s) prohibida(s)")
+        print(f"  ❌ Frases prohibidas: {len(banned)}")
         for phrase, context in banned:
-            print(f"     '{phrase}' in context: ...{context}...")
+            print(f"     '{phrase}' en contexto: ...{context}...")
     
     if errors:
-        print(f"\n  ❌ FAILED: {'; '.join(errors)}")
+        print(f"\n  ❌ FALLÓ: {'; '.join(errors)}")
         return False
     else:
-        print(f"\n  ✓ PASSED")
+        print(f"\n  ✓ PASÓ")
         return True
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: validate_draft.py <draft_file>")
-        print("Or pipe text via stdin: cat draft.txt | validate_draft.py -")
+        print("Uso: validate_draft.py <archivo_borrador>")
+        print("O envía texto vía stdin: cat borrador.txt | validate_draft.py -")
         sys.exit(1)
     
     file_path = sys.argv[1]
     
     if file_path == "-":
-        # Read from stdin
+        # Lee desde stdin
         text = sys.stdin.read()
-        validate_draft(text, "Stdin input")
+        validate_draft(text, "Entrada de stdin")
     else:
-        # Read from file
+        # Lee desde archivo
         path = Path(file_path)
         if not path.exists():
-            print(f"Error: File not found: {file_path}")
+            print(f"Error: Archivo no encontrado: {file_path}")
             sys.exit(1)
         
         text = path.read_text()

@@ -1,55 +1,55 @@
-# Pilot Idea Library
+# Biblioteca de Ideas de Pilotos
 
-Detailed descriptions of pilot ideas and when to use each based on prospect context.
+Descripciones detalladas de ideas de pilotos y cuándo usar cada una basándose en el contexto del prospecto.
 
-## Release-Readiness Checklist
+## Lista de Verificación de Preparación para Lanzamiento
 
-**Best for**: Engineering managers, tech leads, release managers
-**Stack signals**: CI/CD, deployment pipelines, release processes
-**Description**: A focused checklist to verify code is ready for production—covers tests, docs, configs, and rollbacks
+**Mejor para**: Gerentes de ingeniería, líderes técnicos, gerentes de lanzamiento
+**Señales de stack**: CI/CD, pipelines de despliegue, procesos de lanzamiento
+**Descripción**: Una lista de verificación enfocada para verificar que el código está listo para producción—cubre pruebas, docs, configs y rollbacks
 
-**Sample hook**: "Since you're shipping weekly, a release-readiness checklist could cut your rollback rate"
+**Gancho de ejemplo**: "Como estás lanzando semanalmente, una lista de verificación de preparación de lanzamiento podría reducir tu tasa de rollback"
 
-## Incident Handoff / Runbook Capture
+## Traspaso de Incidentes / Captura de Runbooks
 
-**Best for**: SREs, DevOps engineers, platform teams
-**Stack signals**: Incident management, on-call, observability tools
-**Description**: Document the institutional knowledge around incident response so handoffs are smooth
+**Mejor para**: SREs, ingenieros DevOps, equipos de plataforma
+**Señales de stack**: Gestión de incidentes, guardia, herramientas de observabilidad
+**Descripción**: Documenta el conocimiento institucional sobre respuesta a incidentes para que los traspasos sean fluidos
 
-**Sample hook**: "Saw your post about on-call—capturing runbooks could make your next handoff way easier"
+**Gancho de ejemplo**: "Vi tu publicación sobre guardia—capturar runbooks podría hacer tu próximo traspaso mucho más fácil"
 
-## Repo Readiness / Onboarding Checklist
+## Preparación de Repositorios / Lista de Verificación de Onboarding
 
-**Best for**: Engineering managers, team leads, developer experience
-**Stack signals**: GitHub, GitLab, codebase, new hire onboarding
-**Description**: A checklist to ensure every new repo has what developers need to contribute fast
+**Mejor para**: Gerentes de ingeniería, líderes de equipo, experiencia del desarrollador
+**Señales de stack**: GitHub, GitLab, base de código, onboarding de nuevos empleados
+**Descripción**: Una lista de verificación para asegurar que cada nuevo repo tiene lo que los desarrolladores necesitan para contribuir rápido
 
-**Sample hook**: "Since you're growing the team, a repo-readiness checklist could speed up onboarding"
+**Gancho de ejemplo**: "Como estás creciendo el equipo, una lista de verificación de preparación de repo podría acelerar el onboarding"
 
-## Data-Quality or Validation Workflow
+## Flujo de Trabajo de Calidad o Validación de Datos
 
-**Best for**: Data engineers, analysts, QA
-**Stack signals**: Data pipelines, ETL, databases, Great Expectations, dbt
-**Description**: A workflow to catch bad data before it spreads through your system
+**Mejor para**: Ingenieros de datos, analistas, QA
+**Señales de stack**: Pipelines de datos, ETL, bases de datos, Great Expectations, dbt
+**Descripción**: Un flujo de trabajo para atrapar datos malos antes de que se propaguen por tu sistema
 
-**Sample hook**: "Since you're dealing with data pipelines, a validation workflow could catch issues early"
+**Gancho de ejemplo**: "Como estás lidiando con pipelines de datos, un flujo de trabajo de validación podría atrapar problemas temprano"
 
-## Migration Readiness Checklist
+## Lista de Verificación de Preparación para Migración
 
-**Best for**: Technical leads, architects, platform engineers
-**Stack signals**: Legacy systems, cloud migration, major refactors
-**Description**: A focused checklist to assess readiness before a big migration
+**Mejor para**: Líderes técnicos, arquitectos, ingenieros de plataforma
+**Señales de stack**: Sistemas legacy, migración a la nube, refactors mayores
+**Descripción**: Una lista de verificación enfocada para evaluar preparación antes de una gran migración
 
-**Sample hook**: "A migration-readiness checklist could help you spot gaps before you start"
+**Gancho de ejemplo**: "Una lista de verificación de preparación de migración podría ayudarte a detectar vacíos antes de empezar"
 
-## Selection Guidance
+## Guía de Selección
 
-Pick the **smallest** pilot that connects to their role:
+Elige el piloto más **pequeño** que se conecte con su rol:
 
-1. Do they own releases? → Release-readiness checklist
-2. Do they handle incidents? → Runbook capture
-3. Are they bringing on people? → Onboarding checklist
-4. Do they work with data? → Validation workflow
-5. Are they planning a migration? → Migration readiness
+1. ¿Son dueños de lanzamientos? → Lista de verificación de preparación para lanzamiento
+2. ¿Manejan incidentes? → Captura de runbooks
+3. ¿Están incorporando personas? → Lista de verificación de onboarding
+4. ¿Trabajan con datos? → Flujo de trabajo de validación
+5. ¿Están planeando una migración? → Preparación de migración
 
-Keep it low-risk and tied to something they already care about.
+Mantenlo de bajo riesgo y vinculado a algo que ya les importa.

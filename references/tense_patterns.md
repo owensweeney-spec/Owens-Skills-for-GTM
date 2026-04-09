@@ -1,85 +1,85 @@
-# Tense Patterns for Outreach
+# Patrones de Tiempo Verbal para Prospección
 
-Examples of each required tense pattern in context. Use these as models when drafting.
+Ejemplos de cada patrón de tiempo verbal requerido en contexto. Usa estos como modelos al redactar.
 
-## Past Observation
+## Observación Pasada
 
-Use to show you've done homework on the prospect.
+Usa para mostrar que hiciste tu tarea sobre el prospecto.
 
-**Pattern**: "Saw your [content] about [topic]"
+**Patrón**: "Vi tu [contenido] sobre [tema]"
 
-**Examples**:
-- "Saw your post about speeding up deploys"
-- "Saw your talk on incident management"
-- "Saw you're using Terraform for infra"
+**Ejemplos**:
+- "Vi tu publicación sobre acelerar despliegues"
+- "Vi tu charla sobre gestión de incidentes"
+- "Vi que estás usando Terraform para infra"
 
-**When to use**: Opening line to establish relevance
+**Cuándo usar**: Línea de apertura para establecer relevancia
 
-## Present Rationale
+## Justificación Presente
 
-Use to connect their current focus to the pilot.
+Usa para conectar su enfoque actual con el piloto.
 
-**Pattern**: "Since you're [activity]..."
+**Patrón**: "Como estás [actividad]..."
 
-**Examples**:
-- "Since you're focused on reducing downtime…"
-- "Since you're shipping faster…"
-- "Since you're onboarding new engineers…"
+**Ejemplos**:
+- "Como estás enfocado en reducir downtime…"
+- "Como estás lanzando más rápido…"
+- "Como estás incorporando nuevos ingenieros…"
 
-**When to use**: Bridge from observation to suggestion
+**Cuándo usar**: Puente de observación a sugerencia
 
-## Conditional Suggestion
+## Sugerencia Condicional
 
-Use to propose the pilot as a low-risk option.
+Usa para proponer el piloto como una opción de bajo riesgo.
 
-**Pattern**: "A good first thing to try could be…"
+**Patrón**: "Una buena primera cosa para probar podría ser…"
 
-**Examples**:
-- "A good first thing to try could be a release-readiness checklist"
-- "A good first thing to try could be capturing your runbooks"
-- "A good first thing to try could be a quick validation workflow"
+**Ejemplos**:
+- "Una buena primera cosa para probar podría ser una lista de verificación de preparación de lanzamiento"
+- "Una buena primera cosa para probar podría ser capturar tus runbooks"
+- "Una buena primera cosa para probar podría ser un flujo de trabajo de validación rápido"
 
-**When to use**: Present the pilot idea
+**Cuándo usar**: Presenta la idea de piloto
 
-## Modal Future
+## Futuro Modal
 
-Use to describe the outcome without promising.
+Usa para describir el resultado sin prometer.
 
-**Pattern**: "You could have it…"
+**Patrón**: "Podrías tenerlo…"
 
-**Examples**:
-- "You could have it running in an afternoon"
-- "You could have it set up in a couple hours"
-- "You could have it ready before your next sprint"
+**Ejemplos**:
+- "Podrías tenerlo funcionando en una tarde"
+- "Podrías tenerlo configurado en un par de horas"
+- "Podrías tenerlo listo antes de tu próximo sprint"
 
-**When to use**: Address timing/effort concerns
+**Cuándo usar**: Aborda preocupaciones de tiempo/esfuerzo
 
-## Habitual Present
+## Presente Habitual
 
-Use to normalize the experience.
+Usa para normalizar la experiencia.
 
-**Pattern**: "This usually takes…"
+**Patrón**: "Esto normalmente toma…"
 
-**Examples**:
-- "This usually takes 1-2 hours to set up"
-- "Most teams see value in the first week"
-- "It typically takes a day to get the basics in place"
+**Ejemplos**:
+- "Esto normalmente toma 1-2 horas para configurar"
+- "La mayoría de los equipos ven valor en la primera semana"
+- "Típicamente toma un día poner lo básico en su lugar"
 
-**When to use**: Manage expectations, reduce friction
+**Cuándo usar**: Gestiona expectativas, reduce fricción
 
-## Putting It Together
+## Juntándolo Todo
 
-Example email using all patterns:
+Ejemplo de correo usando todos los patrones:
 
-> Saw your post about speeding up deploys. Since you're focused on reducing rollbacks, a good first thing to try could be a release-readiness checklist. You could have it running in an afternoon. This usually takes about an hour to set up. Worth trying?
+> Vi tu publicación sobre acelerar despliegues. Como estás enfocado en reducir rollbacks, una buena primera cosa para probar podría ser una lista de verificación de preparación de lanzamiento. Podrías tenerlo funcionando en una tarde. Esto normalmente toma alrededor de una hora configurar. ¿Vale la pena intentar?
 
-## What to Avoid
+## Qué Evitar
 
-- Don't stack multiple tenses in one sentence
-- Don't use future tense ("will help you") — sounds salesy
-- Don't use perfect tense ("have been focusing") — too formal
-- Keep each sentence to one tense pattern
+- No apiles múltiples tiempos en una oración
+- No uses tiempo futuro ("te ayudará") — suena a ventas
+- No uses tiempo perfecto ("has estado enfocándote") — demasiado formal
+- Mantén cada oración a un patrón de tiempo
 
-## Tone Check
+## Verificación de Tono
 
-Read each sentence aloud. If it sounds like something a real person would text a colleague, it's right. If it sounds like marketing copy, revise.
+Lee cada oración en voz alta. Si suena como algo que una persona real enviaría por mensaje a un colega, está bien. Si suena como copia de marketing, revisa.

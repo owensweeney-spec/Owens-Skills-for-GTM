@@ -1,95 +1,95 @@
-# Banned Phrases
+# Frases Prohibidas
 
-Phrases to avoid in outreach. These sound templated, salesy, or AI-generated.
+Frases a evitar en prospección. Suenan a plantilla, ventas, o generadas por IA.
 
-## Hard Banned Phrases
+## Frases Estrictamente Prohibidas
 
-These must never appear in output:
+Estas nunca deben aparecer en la salida:
 
-### AI-Ish Filler
-- "I'll keep this short"
-- "If that's useful"
-- "Happy to"
-- "Just" (as in "Just wanted to...")
-- "Quick question"
-- "Hope you're doing well"
-- "I wanted to reach out because"
-- "Not sure if this is relevant"
-- "Curious if"
-- "Worth a shot"
+### Relleno de IA
+- "Seré breve"
+- "Si te resulta útil"
+- "Encantado de"
+- "Solo" (como en "Solo quería...")
+- "Pregunta rápida"
+- "Espero que estés bien"
+- "Quería contactarte porque"
+- "No estoy seguro si esto es relevante"
+- "Curioso si"
+- "Vale la pena intentar"
 
-### Corporate Speak
-- "Optimize"
-- "Leverage"
-- "Synergy"
-- "Streamline"
-- "Unlock"
-- "Revolutionize"
-- "Transform"
-- "Game-changing"
-- "Disrupt"
-- "Scalable"
-- "Best-in-class"
-- "World-class"
-- "Cutting-edge"
+### Lenguaje Corporativo
+- "Optimizar"
+- "Aprovechar"
+- "Sinergia"
+- "Agilizar"
+- "Desbloquear"
+- "Revolucionar"
+- "Transformar"
+- "Revolucionario"
+- "Disrumpir"
+- "Escalable"
+- "Mejor en su clase"
+- "Clase mundial"
+- "Vanguardia"
 
-### Salesy Language
-- "Book a demo"
-- "Schedule a call"
-- "Let me know if you're interested"
-- "Hope this helps"
-- "Feel free to reach out"
-- "Don't hesitate to"
-- "I'm confident"
-- "You'll love"
-- "Proven"
-- "Trusted by"
+### Lenguaje de Ventas
+- "Agenda una demo"
+- "Programa una llamada"
+- "Avísame si te interesa"
+- "Espero que esto ayude"
+- "No dudes en contactar"
+- "No dudes en"
+- "Estoy seguro"
+- "Te encantará"
+- "Probado"
+- "Confiado por"
 
-## Soft Banned Phrases
+## Frases Moderadamente Prohibidas
 
-These are okay occasionally but avoid when possible:
+Estas están bien ocasionalmente pero evítalas cuando sea posible:
 
-- "Great work on [X]" — can sound patronizing
-- "Nice [article/post/update]" — too generic
-- "I noticed you" — slightly creepy
-- "Based on your profile" — too obvious
-- "In your space" — corporate jargon
-- "At a high level" — filler
-- "The thing is" — filler
-- "To be honest" — unnecessary
-- "Honestly" — unnecessary
-- "Basically" — filler
-- "Actually" — filler
+- "Gran trabajo en [X]" — puede sonar condescendiente
+- "Buen [artículo/publicación/actualización]" — demasiado genérico
+- "Noté que" — ligeramente espeluznante
+- "Basado en tu perfil" — demasiado obvio
+- "En tu espacio" — jerga corporativa
+- "A alto nivel" — relleno
+- "La cosa es" — relleno
+- "Para ser honesto" — innecesario
+- "Honestamente" — innecesario
+- "Básicamente" — relleno
+- "Realmente" — relleno
 
-## Phrases to Use Instead
+## Frases a Usar en su Lugar
 
-| Instead of | Use |
+| En lugar de | Usa |
 |------------|-----|
-| "I'll keep this short" | Just write short |
-| "If that's useful" | Skip entirely |
-| "Happy to help" | Skip entirely |
-| "Optimize" | Improve, fix, change |
-| "Leverage" | Use, build on |
-| "Unlock" | Get, find, see |
-| "Streamline" | Simplify, speed up |
-| "Book a demo" | "Worth a quick chat?" |
-| "Schedule a call" | "Got 10 min?" |
+| "Seré breve" | Solo escribe corto |
+| "Si te resulta útil" | Omite completamente |
+| "Encantado de ayudar" | Omite completamente |
+| "Optimizar" | Mejorar, arreglar, cambiar |
+| "Aprovechar" | Usar, construir sobre |
+| "Desbloquear" | Obtener, encontrar, ver |
+| "Agilizar" | Simplificar, acelerar |
+| "Agenda una demo" | "¿Vale una charla rápida?" |
+| "Programa una llamada" | "¿Tienes 10 min?" |
 
-## Detection Checklist
+## Lista de Verificación de Detección
 
-Before finalizing any draft, scan for:
+Antes de finalizar cualquier borrador, escanea por:
 
-1. Any em dashes (— or --)
-2. Any bullet points
-3. Words from the banned lists above
-4. Sentences starting with "I" too often
-5. Questions that are really pitches
-6. Anything that sounds like it could be a template
+1. Cualquier guion largo (— o --)
+2. Cualquier viñeta
+3. Palabras de las listas prohibidas arriba
+4. Oraciones que comienzan con "Yo" muy seguido
+5. Preguntas que en realidad son pitches
+6. Cualquier cosa que suene como si pudiera ser una plantilla
 
-## Why These Phrases Fail
+## Por Qué Estas Frases Fallan
 
-- **AI-ish filler**: Signals to the recipient that this is mass outreach
-- **Corporate speak**: Creates distance, sounds insincere
-- **Salesy language**: Triggers spam filters, repels buyers
+- **Relleno de IA**: Señala al destinatario que esto es prospección masiva
+- **Lenguaje corporativo**: Crea distancia, suena insincero
+- **Lenguaje de ventas**: Activa filtros de spam, repele compradores
 
-The goal: sound like a real person who did homework and has a genuine idea worth sharing.
+El objetivo: sonar como una persona real que hizo su tarea y tiene una idea genuina que vale la pena compartir.
