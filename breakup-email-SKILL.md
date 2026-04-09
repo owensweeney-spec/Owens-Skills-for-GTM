@@ -1,309 +1,309 @@
 ---
 name: breakup-email
-description: Write a concise, personalized breakup email (80 words or less) for a prospect you've been emailing. Uses a persistent memory file to track learnings from previous emails. Includes one personalized hook with deeper inference from profile, and one binary CTA. Avoid corporate speak, em dashes, and AI-isms. 100% OSS, works with large enterprises.
+description: Escribe un correo de despedida conciso y personalizado (80 palabras o menos) para un prospecto al que has estado contactando. Usa un archivo de memoria persistente para rastrear aprendizajes de correos anteriores. Incluye un gancho personalizado con inferencia profunda del perfil, y un CTA binario. Evita lenguaje corporativo, guiones largos y frases de IA. 100% código abierto, funciona con grandes empresas.
 triggers:
-  - "write breakup email"
-  - "breakup email for prospect"
-  - "last attempt email"
-  - "goodbye email to prospect"
-  - "stop reaching out email"
-  - "final follow up email"
-  - "no response follow up"
-  - "generate breakup email"
+  - "escribir correo de despedida"
+  - "correo de despedida para prospecto"
+  - "correo de último intento"
+  - "correo de adiós a prospecto"
+  - "correo para dejar de contactar"
+  - "correo de seguimiento final"
+  - "seguimiento sin respuesta"
+  - "generar correo de despedida"
 ---
 
-# Breakup Email Skill
+# Habilidad de Correo de Despedida
 
-Write a breakup email to a prospect when:
-- User has already sent multiple emails without response
-- User wants to gracefully end the conversation
-- Email should be under 80 words
+Escribe un correo de despedida a un prospecto cuando:
+- El usuario ya ha enviado múltiples correos sin respuesta
+- El usuario quiere terminar la conversación con gracia
+- El correo debe tener menos de 80 palabras
 
-## Memory System
+## Sistema de Memoria
 
-Before writing each email:
-1. Read `/workspace/project/Owens-Skills-for-GTM/scripts/email_memory.json` to see what has been learned from previous emails
-2. After writing, append new learnings to that file in the format:
+Antes de escribir cada correo:
+1. Lee `/workspace/project/Owens-Skills-for-GTM/scripts/email_memory.json` para ver qué se ha aprendido de correos anteriores
+2. Después de escribir, añade nuevos aprendizajes a ese archivo en el formato:
    ```json
    {
-     "profile_hash": "unique identifier for this person",
-     "what_worked": "what made this email effective",
-     "what_to_avoid": "what fell flat or felt generic",
-     "inference_used": "the deeper insight about this person that made this email stand out"
+     "profile_hash": "identificador único para esta persona",
+     "what_worked": "qué hizo efectivo este correo",
+     "what_to_avoid": "qué no funcionó o se sintió genérico",
+     "inference_used": "la percepción profunda sobre esta persona que hizo destacar este correo"
    }
    ```
 
-## Input Requirements
+## Requisitos de Entrada
 
-The user will provide:
-1. LinkedIn profile (copy/paste) - extract name, role, company, interests, background
+El usuario proporcionará:
+1. Perfil de LinkedIn (copiar/pegar) - extrae nombre, rol, empresa, intereses, antecedentes
 
-That's it. Do not ask for previous email context or company menu. Infer what you need from their profile.
+Eso es todo. No pidas contexto de correos anteriores o menú de empresas. Infiere lo que necesitas de su perfil.
 
-## Deep Inference Guidelines
+## Guías de Inferencia Profunda
 
-For each prospect, analyze their profile to infer:
+Para cada prospecto, analiza su perfil para inferir:
 
-**What does their recent activity/certifications tell you about them?**
-- If they got a cert recently: What problem were they trying to solve? What tool interest might they have?
-- If they post about a conference: What topics are they focused on? What's their pain point?
-- If they changed jobs recently: What's their motivation? What are they building?
+**¿Qué te dice su actividad reciente/certificaciones sobre ellos?**
+- Si obtuvieron una certificación recientemente: ¿Qué problema intentaban resolver? ¿Qué interés en herramientas podrían tener?
+- Si publican sobre una conferencia: ¿En qué temas están enfocados? ¿Cuál es su punto de dolor?
+- Si cambiaron de trabajo recientemente: ¿Cuál es su motivación? ¿Qué están construyendo?
 
-**What objections might they have?**
-- Senior leaders: Too busy, already has solutions, needs ROI proof
-- Engineers: Wants technical depth, worries about vendor lock-in
-- Managers: Worried about team adoption, needs to justify to leadership
+**¿Qué objeciones podrían tener?**
+- Líderes senior: Muy ocupados, ya tienen soluciones, necesitan prueba de ROI
+- Ingenieros: Quieren profundidad técnica, les preocupa el vendor lock-in
+- Gerentes: Preocupados por la adopción del equipo, necesitan justificarlo ante el liderazgo
 
-**What would make them actually respond?**
-- Specific to their company context
-- Addresses a pain they likely have
-- Not generic "let's chat" but something that shows you did homework
+**¿Qué los haría realmente responder?**
+- Específico al contexto de su empresa
+- Aborda un dolor que probablemente tienen
+- No un genérico "charlemos" sino algo que muestre que hiciste tu tarea
 
-### Inference Examples
+### Ejemplos de Inferencia
 
-| Profile Signal | Inferred Meaning | Email Angle |
+| Señal del Perfil | Significado Inferido | Ángulo del Correo |
 |----------------|-------------------|--------------|
-| Claude Code cert | Already using AI coding tools, cares about developer experience | Mention tools that integrate with their workflow |
-| Hiring DevX team | cares about developer productivity, knows the pain | Reference other companies who improved DORA metrics |
-| Posts about QCon AI | Focused on AI governance, enterprise concerns | Reference enterprise-scale implementations |
-| 20 years at company | Values stability, loyalty | Don't pitch disruptive change, pitch improvement |
-| Active in tech communities | Early adopter, open to new tools | Can be more direct, less hand-holding |
-| No recent posts | Busy or contemplative, hard to reach | Keep it shorter, lower commitment ask |
-| Promotion > 6 months ago | Stale info - don't mention it | Use ongoing tenure or current work instead |
-| Content shared on LinkedIn | Say "on LinkedIn" so they know where you found it | Reference the actual point they made, not just "saw your post" |
-| Long tenure at industry leader (Bloomberg, etc.) | Seen trends come and go, skeptical of hype | Don't pitch disruption, pitch efficiency. Connect to their specific domain. |
-| C++ / performance-focused | Cares about correctness, not flashy tools | Pitch reliability, not speed. Mention "without adding risk". |
-| Financial software background | High stakes, can't break things | Pitch "add capacity without adding risk", "production systems" |
-| Startup founder background | Values ROI, pragmatic | Connect to outcomes, not features |
-| Side projects that ship | Actually builds things, not just talks | Reference the actual project, not their general "builder" status |
-| Company transition | Must connect to WHY it matters | Don't say "interesting jump" - that's filler. Say what it reveals about them. |
+| Certificación Claude Code | Ya usa herramientas de código con IA, le importa la experiencia del desarrollador | Menciona herramientas que se integran con su flujo de trabajo |
+| Contratando equipo DevX | Le importa la productividad del desarrollador, conoce el dolor | Referencia otras empresas que mejoraron métricas DORA |
+| Publica sobre QCon AI | Enfocado en gobernanza de IA, preocupaciones empresariales | Referencia implementaciones a escala empresarial |
+| 20 años en la empresa | Valora estabilidad, lealtad | No vendas cambio disruptivo, vende mejora |
+| Activo en comunidades tech | Adoptador temprano, abierto a nuevas herramientas | Puedes ser más directo, menos paternalista |
+| Sin publicaciones recientes | Ocupado o contemplativo, difícil de alcanzar | Mantenlo más corto, menor compromiso |
+| Promoción hace > 6 meses | Información vieja - no la menciones | Usa su permanencia actual o trabajo actual en su lugar |
+| Contenido compartido en LinkedIn | Di "en LinkedIn" para que sepan dónde lo encontraste | Referencia el punto real que hicieron, no solo "vi tu publicación" |
+| Larga permanencia en líder de industria (Bloomberg, etc.) | Ha visto tendencias ir y venir, escéptico del hype | No vendas disrupción, vende eficiencia. Conéctalo a su dominio específico. |
+| C++ / enfocado en rendimiento | Le importa la corrección, no herramientas llamativas | Vende confiabilidad, no velocidad. Menciona "sin añadir riesgo". |
+| Antecedentes en software financiero | Alto riesgo, no puede romper cosas | Vende "añadir capacidad sin añadir riesgo", "sistemas de producción" |
+| Antecedentes de fundador de startup | Valora ROI, pragmático | Conéctalo a resultados, no características |
+| Proyectos paralelos que se lanzan | Realmente construye cosas, no solo habla | Referencia el proyecto real, no su estatus general de "constructor" |
+| Transición de empresa | Debe conectarse a POR QUÉ importa | No digas "salto interesante" - eso es relleno. Di qué revela sobre ellos. |
 
-### OpenHands Research (MUST DO BEFORE PRINTING)
+### Investigación sobre OpenHands (OBLIGATORIO ANTES DE IMPRIMIR)
 
-What OpenHands actually does:
-- AI coding agent for complex engineering tasks
-- SDK: composable Python library to define agents in code
-- CLI: like Claude Code or Codex, powered by Claude, GPT, or any LLM
-- Cloud: hosted with Slack, Jira, Linear integrations
-- Enterprise: self-hosted on Kubernetes
-- 100% OSS, works with large enterprises
+Lo que OpenHands realmente hace:
+- Agente de código con IA para tareas de ingeniería complejas
+- SDK: biblioteca Python composable para definir agentes en código
+- CLI: como Claude Code o Codex, impulsado por Claude, GPT, o cualquier LLM
+- Cloud: alojado con integraciones de Slack, Jira, Linear
+- Enterprise: auto-alojado en Kubernetes
+- 100% código abierto, funciona con grandes empresas
 
-What to pitch (specific to their context):
-- DevSecOps: "automate security fixes in code"
-- Platform teams: "scale to 1000s of agents"
-- Managers: "your team designs the agents, we provide the platform"
-- Financial services: "coding agent platform, air-gapped and sandboxed, designed by your team and customized to your infrastructure preferences"
+Qué vender (específico a su contexto):
+- DevSecOps: "automatizar correcciones de seguridad en código"
+- Equipos de plataforma: "escalar a miles de agentes"
+- Gerentes: "tu equipo diseña los agentes, nosotros proporcionamos la plataforma"
+- Servicios financieros: "plataforma de agentes de código, aislada y en sandbox, diseñada por tu equipo y personalizada a tus preferencias de infraestructura"
 
-### Better Hooks
-- Questions work better than statements: "How was your first year as...?"
-- "I imagine..." frames assumptions as speculation, not fact
-- If you don't have enough info to personalize, DON'T. Be honest.
+### Mejores Ganchos
+- Las preguntas funcionan mejor que las afirmaciones: "¿Cómo fue tu primer año como...?"
+- "Me imagino..." enmarca suposiciones como especulación, no como hecho
+- Si no tienes suficiente información para personalizar, NO LO HAGAS. Sé honesto.
 
-**Voice check:**
-- Would THIS person think "another vendor who doesn't get it" or "this person actually understands my world?"
-- If it sounds like it could be a template with name swapped, REWRITE
-- Eliminate any phrase you could put in front of ANY person
+**Verificación de voz:**
+- ¿Pensaría ESTA persona "otro vendedor que no entiende" o "esta persona realmente entiende mi mundo"?
+- Si suena como si pudiera ser una plantilla con el nombre intercambiado, REESCRIBE
+- Elimina cualquier frase que podrías poner frente a CUALQUIER persona
 
-## Why AI-Generated Emails Fail (Research-Based)
+## Por Qué Fallan los Correos Generados por IA (Basado en Investigación)
 
-A 2025 analysis revealed 84% of AI-written business emails get no response. Key reasons:
+Un análisis de 2025 reveló que el 84% de los correos empresariales escritos por IA no obtienen respuesta. Razones clave:
 
-**AI-isms and Clichés to avoid:**
-- "I hope this email finds you well"
-- "I'm reaching out to..."
-- "Please don't hesitate to contact me"
-- "Just checking in"
-- "Following up on my previous email"
-- These instantly signal automation and feel insincere
+**Frases de IA y clichés a evitar:**
+- "Espero que este correo te encuentre bien"
+- "Te estoy contactando para..."
+- "No dudes en contactarme"
+- "Solo chequeando"
+- "Dando seguimiento a mi correo anterior"
+- Estas señales inmediatamente indican automatización y se sienten insinceras
 
-**Lack of genuine personalization:**
-- Deep, meaningful personalization beyond name merge
-- Reference something specific only THEY would understand
+**Falta de personalización genuina:**
+- Personalización profunda y significativa más allá de fusión de nombre
+- Referencia algo específico que solo ELLOS entenderían
 
-**Bloated and indirect tone:**
-- Wordy sentences that lack impact
-- Filler words and "bloated" language
-- Be concise and direct
+**Tono inflado e indirecto:**
+- Oraciones verbosas que carecen de impacto
+- Palabras de relleno y lenguaje "inflado"
+- Sé conciso y directo
 
-**Absence of human emotion and context:**
-- Can't replicate emotional nuance or shared history
-- Messages feel "transactional" and "canned"
+**Ausencia de emoción humana y contexto:**
+- No puede replicar matices emocionales o historia compartida
+- Los mensajes se sienten "transaccionales" y "enlatados"
 
-**Overuse of structure:**
-- Don't rely on bullet points and formulaic structures
-- Natural conversational flows work better
+**Sobreuso de estructura:**
+- No dependas de viñetas y estructuras formulaicas
+- Los flujos conversacionales naturales funcionan mejor
 
-**Inaccuracy and hallucination:**
-- Never reference something you didn't actually see on their profile
-- If you can't verify it, don't say it
+**Inexactitud y alucinación:**
+- Nunca referencias algo que no viste realmente en su perfil
+- Si no puedes verificarlo, no lo digas
 
-**How to fix:**
-- Use AI as a starting point, not final product
-- Rewrite in your own voice
-- Add specific context only this person would recognize
+**Cómo arreglarlo:**
+- Usa IA como punto de partida, no producto final
+- Reescribe en tu propia voz
+- Añade contexto específico que solo esta persona reconocería
 
-## Writing Guidelines
+## Guías de Redacción
 
-### Core Principle: BESPOKE NOT TEMPLATE
-Every email must be unique. Read the profile fresh. Write specifically for this person.
+### Principio Central: A MEDIDA NO PLANTILLA
+Cada correo debe ser único. Lee el perfil fresco. Escribe específicamente para esta persona.
 
-### Structure (in order)
-1. **Name + Hook** - Start with their name, then a fragment that shows you understand their world
-2. **What is it** - Directly name and describe what OpenHands is for them
-3. **CTA** - Two clear options
+### Estructura (en orden)
+1. **Nombre + Gancho** - Comienza con su nombre, luego un fragmento que muestre que entiendes su mundo
+2. **Qué es** - Nombra y describe directamente qué es OpenHands para ellos
+3. **CTA** - Dos opciones claras
 
-**Key lesson:** Don't separate "context" (I've reached out a few times) as its own line. Combine everything into a natural flow.
+**Lección clave:** No separes el "contexto" (Te he contactado varias veces) como su propia línea. Combina todo en un flujo natural.
 
-**Format rules:**
-- No em dashes
-- No AI-isms ("I hope this email finds you well", "I'm reaching out to...")
-- Name, then first sentence - not "Name - sentence"
+**Reglas de formato:**
+- Sin guiones largos
+- Sin frases de IA ("Espero que este correo te encuentre bien", "Te estoy contactando para...")
+- Nombre, luego primera oración - no "Nombre - oración"
 
-### Production Monitoring (Optional)
+### Monitoreo de Producción (Opcional)
 
-If using in production, consider logging:
-- Which hooks worked vs didn't
-- Response rates by industry/role
-- Time to first response
+Si usas en producción, considera registrar:
+- Qué ganchos funcionaron vs no funcionaron
+- Tasas de respuesta por industria/rol
+- Tiempo hasta la primera respuesta
 
-This helps iterate on the skill over time.
+Esto ayuda a iterar sobre la habilidad con el tiempo.
 
-### Recipient Perspective Check (MUST DO BEFORE PRINTING)
+### Verificación de Perspectiva del Destinatario (OBLIGATORIO ANTES DE IMPRIMIR)
 
-Before outputting any email, ask yourself:
-- Would THIS PERSON open this? Or would they delete it thinking "generic pitch"?
-- Did I reference something they actually OWN, not just something on their profile?
-- If I reference their content, did I say WHERE I found it?
-- Is the hook connected to what I'm selling, or is it a random compliment?
-- Did I avoid stale info (promotions > 6 months ago, old certifications)?
-- **Did I use a template and just swap in their name?** - If yes, REWRITE
-- **Is the value prop specific to their domain?** - "ship faster" doesn't work for everyone. Bloomberg = "add capacity without adding risk". Healthcare = "move faster without breaking compliance".
-- **Would this email ONLY work for this person?** - If you can swap the name and it works for someone else, it's not personalized enough.
+Antes de producir cualquier correo, pregúntate:
+- ¿Abriría ESTA PERSONA esto? ¿O lo eliminarían pensando "pitch genérico"?
+- ¿Referencié algo que realmente POSEEN, no solo algo en su perfil?
+- Si referencio su contenido, ¿dije DÓNDE lo encontré?
+- ¿Está el gancho conectado a lo que estoy vendiendo, o es un cumplido aleatorio?
+- ¿Evité información vieja (promociones hace > 6 meses, certificaciones antiguas)?
+- **¿Usé una plantilla y solo intercambié su nombre?** - Si es así, REESCRIBE
+- **¿Es la propuesta de valor específica a su dominio?** - "enviar más rápido" no funciona para todos. Bloomberg = "añadir capacidad sin añadir riesgo". Salud = "moverse más rápido sin romper cumplimiento".
+- **¿Este correo SOLO funcionaría para esta persona?** - Si puedes intercambiar el nombre y funciona para alguien más, no está suficientemente personalizado.
 
-If the answer to any of these is "no", REWRITE before printing.
+Si la respuesta a cualquiera de estas es "no", REESCRIBE antes de imprimir.
 
-### Anti-Template Rules
+### Reglas Anti-Plantilla
 
-NEVER use these phrases without making them specific:
-- ❌ "ship quality code faster" → ✅ "add capacity without adding risk" (for finance)
-- ❌ "ship faster" → ✅ "move faster without breaking compliance" (for healthcare)
-- ❌ "do more without adding headcount" → ✅ specific to their domain
-- ❌ "accelerate development" → ✅ connect to what they actually build
+NUNCA uses estas frases sin hacerlas específicas:
+- ❌ "enviar código de calidad más rápido" → ✅ "añadir capacidad sin añadir riesgo" (para finanzas)
+- ❌ "enviar más rápido" → ✅ "moverse más rápido sin romper cumplimiento" (para salud)
+- ❌ "hacer más sin añadir personal" → ✅ específico a su dominio
+- ❌ "acelerar desarrollo" → ✅ conectar a lo que realmente construyen
 
-The value prop must be rewritten for each person based on:
-- Their industry (finance = can't break things, healthcare = compliance)
-- Their role (IC vs manager vs exec)
-- Their company's pressure points (startup = speed, enterprise = integration)
+La propuesta de valor debe reescribirse para cada persona basado en:
+- Su industria (finanzas = no puede romper cosas, salud = cumplimiento)
+- Su rol (IC vs gerente vs ejecutivo)
+- Los puntos de presión de su empresa (startup = velocidad, empresa = integración)
 
-## First Principles Writing
+## Redacción desde Primeros Principios
 
-Before writing ANY email, ask:
+Antes de escribir CUALQUIER correo, pregunta:
 
-**Who is this person, really?**
-- What keeps them up at night?
-- What have they worked on for years that they care about?
-- What's the ONE thing they'd want more of if they could?
-- What's the ONE thing they'd want to avoid?
+**¿Quién es esta persona, realmente?**
+- ¿Qué los mantiene despiertos por la noche?
+- ¿En qué han trabajado durante años que les importa?
+- ¿Cuál es la ÚNICA cosa que querrían más si pudieran?
+- ¿Cuál es la ÚNICA cosa que querrían evitar?
 
-**What would make THEM open this?**
-- Not what would make anyone open it
-- What would make Gopi open it?
-- What would make Nishtha open it?
-- What would make Akshay open it?
+**¿Qué haría que ELLOS abran esto?**
+- No qué haría que cualquiera lo abra
+- ¿Qué haría que Gopi lo abra?
+- ¿Qué haría que Nishtha lo abra?
+- ¿Qué haría que Akshay lo abra?
 
-**What is their context?**
-- Insurance engineer: Claims can't go down, ever
-- Healthcare engineer: Compliance, audit trails
-- Finance engineer: Production trading systems
-- Bloomberg engineer: Terminal systems that move markets
+**¿Cuál es su contexto?**
+- Ingeniero de seguros: Los reclamos no pueden caerse, nunca
+- Ingeniero de salud: Cumplimiento, pistas de auditoría
+- Ingeniero de finanzas: Sistemas de trading de producción
+- Ingeniero de Bloomberg: Sistemas de terminal que mueven mercados
 
-**When you have NO signal (no posts, no content):**
-- Use what you know from their tenure/role
-- Reference their technical background if they have one
-- Don't pretend to know their challenges - state what you KNOW from the profile
+**Cuando NO tienes señal (sin publicaciones, sin contenido):**
+- Usa lo que sabes de su permanencia/rol
+- Referencia su antecedente técnico si tienen uno
+- No pretendas conocer sus desafíos - declara lo que SABES del perfil
 
-Write the email to THIS person, not to a persona.
+Escribe el correo a ESTA persona, no a una persona.
 
-### Format Rules
-- **First line**: First name followed by comma, then first sentence
-  - ✅ "Rui," then "Congrats on the promotion..."
-  - ❌ "Rui - Congrats on the promotion..."
-- **No em dashes** - replace with commas or periods
-- **80 words maximum** (strict)
+### Reglas de Formato
+- **Primera línea**: Nombre seguido de coma, luego la primera oración
+  - ✅ "Rui," luego "Felicitaciones por la promoción..."
+  - ❌ "Rui - Felicitaciones por la promoción..."
+- **Sin guiones largos** - reemplaza con comas o puntos
+- **80 palabras máximo** (estricto)
 
-### Rules
-- **No corporate language** - avoid:
-  - "compare notes"
-  - "touch base"
-  - "circle back"
-  - "leverage"
-  - "synergy"
-  - "moving forward"
-  - "revisit"
-  - "connect"
-- **Plain, direct language** - write like a real person
-- **Put yourself in receiver's shoes** - would you open this? Would it annoy you?
+### Reglas
+- **Sin lenguaje corporativo** - evita:
+  - "comparar notas"
+  - "tocar base"
+  - "retomar"
+  - "aprovechar"
+  - "sinergia"
+  - "avanzando"
+  - "revisitar"
+  - "conectar"
+- **Lenguaje claro y directo** - escribe como una persona real
+- **Ponte en los zapatos del receptor** - ¿abrirías esto? ¿Te molestaría?
 
-### Binary CTA Examples
-Instead of "Let me know if you're interested" use:
-- "If you want to talk, I'm available Thursday or Friday this week. If not, no pressure."
-- "If this still interests you, let me know. If not, I'll stop reaching out."
-- Put binary CTA options on separate lines for readability
+### Ejemplos de CTA Binario
+En lugar de "Avísame si te interesa" usa:
+- "Si quieres hablar, estoy disponible jueves o viernes esta semana. Si no, sin presión."
+- "Si esto todavía te interesa, avísame. Si no, dejaré de contactarte."
+- Pon las opciones de CTA binario en líneas separadas para legibilidad
 
-## Self-Critique Checklist
+## Lista de Verificación de Autocrítica
 
-After writing, check each item:
-- [ ] Under 80 words?
-- [ ] Contains exactly ONE personalized hook that uses DEEP inference (not surface-level)?
-- [ ] Hook explains WHY this matters to them specifically?
-- [ ] Hook references something they OWN (not just their title or company)?
-- [ ] If referencing their content, did I say WHERE (LinkedIn, post, etc.)?
-- [ ] Contains exactly ONE binary CTA (two options)?
-- [ ] Binary CTA options on separate lines?
-- [ ] Mentions one company from the menu that's RELEVANT to their context?
-- [ ] No em dashes?
-- [ ] First line format is "First name," not "First name -"
-- [ ] No corporate language (compare notes, circle back, etc.)?
-- [ ] Would the receiver feel respected, not manipulated?
-- [ ] Reads like a real human wrote it?
-- [ ] Could this only apply to THIS person, or could it be swapped to anyone?
-- [ ] Does it address a likely objection or concern they might have?
-- [ ] Did I do the recipient perspective check before printing?
+Después de escribir, verifica cada elemento:
+- [ ] ¿Menos de 80 palabras?
+- [ ] ¿Contiene exactamente UN gancho personalizado que usa inferencia PROFUNDA (no superficial)?
+- [ ] ¿El gancho explica POR QUÉ esto importa a ellos específicamente?
+- [ ] ¿El gancho referencia algo que ellos POSEEN (no solo su título o empresa)?
+- [ ] Si referencio su contenido, ¿dije DÓNDE (LinkedIn, publicación, etc.)?
+- [ ] ¿Contiene exactamente UN CTA binario (dos opciones)?
+- [ ] ¿Opciones de CTA binario en líneas separadas?
+- [ ] ¿Menciona una empresa del menú que es RELEVANTE a su contexto?
+- [ ] ¿Sin guiones largos?
+- [ ] ¿El formato de la primera línea es "Nombre," no "Nombre -"?
+- [ ] ¿Sin lenguaje corporativo (comparar notas, retomar, etc.)?
+- [ ] ¿Se sentiría el receptor respetado, no manipulado?
+- [ ] ¿Se lee como si un humano real lo escribió?
+- [ ] ¿Esto solo podría aplicar a ESTA persona, o podría intercambiarse con cualquiera?
+- [ ] ¿Aborda una objeción o preocupación probable que podrían tener?
+- [ ] ¿Hice la verificación de perspectiva del destinatario antes de imprimir?
 
-## Output Format
+## Formato de Salida
 
-Provide the email in this format:
+Proporciona el correo en este formato:
 
 ```
-Subject: [Brief subject line]
+Asunto: [Línea de asunto breve]
 
-[Email body - 80 words max]
+[Cuerpo del correo - 80 palabras máximo]
 
 ---
-Self-Critique:
-[What worked, what didn't, what to improve for next time - be honest about weaknesses]
+Autocrítica:
+[Qué funcionó, qué no, qué mejorar para la próxima vez - sé honesto sobre las debilidades]
 ```
 
-## Example
+## Ejemplo
 
-User Input:
-- LinkedIn: "Sarah Chen - VP of Sales at TechCorp - previously at Salesforce - big into running marathons"
-- Previous emails: 3 follow-ups about scheduling a demo
-- Company to mention: Okta
+Entrada del Usuario:
+- LinkedIn: "Sarah Chen - VP de Ventas en TechCorp - previamente en Salesforce - muy activa corriendo maratones"
+- Correos previos: 3 seguimientos sobre programar una demo
+- Empresa a mencionar: Okta
 
-Output:
+Salida:
 ```
-Subject: Quick question
+Asunto: Pregunta rápida
 
-Sarah - saw you're training for the Boston Marathon. Impressive.
+Sarah, vi que estás entrenando para el Maratón de Boston. Impresionante.
 
-I've reached out a few times about scheduling a demo but haven't heard back. Totally get how busy things get.
+Te he contactado varias veces sobre programar una demo pero no he recibido respuesta. Entiendo totalmente lo ocupadas que se ponen las cosas.
 
-We've helped similar teams at companies like Okta streamline their sales ops. If that sounds useful, happy to chat. If not, I'll stop bothering you.
+Hemos ayudado a equipos similares en empresas como Okta a optimizar sus ops de ventas. Si eso suena útil, encantado de charlar. Si no, dejaré de molestarte.
 
-Best,
-[Your name]
+Saludos,
+[Tu nombre]
 
 ---
-Self-Critique: Hook (marathon training) is specific to them. Binary CTA gives two clear paths. Company reference (Okta) is relevant. Under 80 words. No corporate speak. Direct but not pushy. Could be improved by referencing something about her VP role and what sales teams struggle with - the marathon is surface level, what does she actually care about in her current role?
+Autocrítica: El gancho (entrenamiento de maratón) es específico a ella. El CTA binario da dos caminos claros. La referencia a la empresa (Okta) es relevante. Menos de 80 palabras. Sin lenguaje corporativo. Directo pero no agresivo. Podría mejorarse referenciando algo sobre su rol de VP y con qué luchan los equipos de ventas - el maratón es superficial, ¿qué le importa realmente en su rol actual?
 ```

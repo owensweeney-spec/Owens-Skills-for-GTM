@@ -1,103 +1,103 @@
 ---
 name: post-event-followup
-description: Write a concise, personalized follow-up email (80 words or less) for a prospect who attended the Boston in-person event. Includes one personalized hook and one binary CTA. Mention a relevant existing customer from the menu (Apple, AMD, Nvidia, Wix, Proctor and Gamble, Okta). Avoid corporate speak and em dashes.
+description: Escribe un correo de seguimiento conciso y personalizado (80 palabras o menos) para un prospecto que asistió al evento presencial de Boston. Incluye un gancho personalizado y un CTA binario. Menciona un cliente existente relevante del menú (Apple, AMD, Nvidia, Wix, Proctor and Gamble, Okta). Evita lenguaje corporativo y guiones largos.
 ---
 
-# Post-Event Follow-Up Email Skill
+# Habilidad de Correo de Seguimiento Post-Evento
 
-Write a follow-up email when:
-- Prospect attended the Boston in-person event (From Copilots to Agents: The New Era of Software Delivery)
-- Event was hosted at Pillar VC on March 24, 2025
-- User wants to continue the conversation with attendees
+Escribe un correo de seguimiento cuando:
+- El prospecto asistió al evento presencial de Boston (From Copilots to Agents: The New Era of Software Delivery)
+- El evento fue organizado en Pillar VC el 24 de marzo de 2025
+- El usuario quiere continuar la conversación con los asistentes
 
-## Input Requirements
+## Requisitos de Entrada
 
-The user will provide:
-1. Attendee info (name, role, company) - what you know about them
-2. Something specific they said or asked about at the event (if available)
-3. Which company from the menu to reference: Apple, AMD, Nvidia, Wix, Proctor and Gamble, or Okta
+El usuario proporcionará:
+1. Información del asistente (nombre, rol, empresa) - lo que sabes sobre ellos
+2. Algo específico que dijeron o preguntaron en el evento (si está disponible)
+3. Qué empresa del menú referenciar: Apple, AMD, Nvidia, Wix, Proctor and Gamble, o Okta
 
-## Writing Guidelines
+## Guías de Redacción
 
-### Structure (in order)
-1. **Personalized Hook** - Reference something specific you noticed about them or their company
-2. **Event Reference** - Briefly reference the Boston event (Pillar VC, March 24)
-3. **Value Anchor** - Mention a relevant customer from the menu
-4. **Binary CTA** - Two clear options, no more
+### Estructura (en orden)
+1. **Gancho Personalizado** - Referencia algo específico que notaste sobre ellos o su empresa
+2. **Referencia al Evento** - Menciona brevemente el evento de Boston (Pillar VC, 24 de marzo)
+3. **Ancla de Valor** - Menciona un cliente relevante del menú
+4. **CTA Binario** - Dos opciones claras, no más
 
-### Rules
-- **80 words maximum** (strict)
-- **No em dashes** (replace with commas or periods)
-- **No corporate language** - avoid:
-  - "compare notes"
-  - "touch base"
-  - "circle back"
-  - "leverage"
-  - "synergy"
-  - "moving forward"
-  - "revisit"
-  - "connect"
-- **Avoid AI-ish filler** - avoid:
-  - "I'll keep this short"
-  - "Happy to"
-  - "Just wanted to..."
-  - "Quick question"
-  - "Hope you're doing well"
-  - "I wanted to reach out because"
-- **Plain, direct language** - write like a real person
-- **Put yourself in receiver's shoes** - would you open this? Would it annoy you?
+### Reglas
+- **80 palabras máximo** (estricto)
+- **Sin guiones largos** (reemplaza con comas o puntos)
+- **Sin lenguaje corporativo** - evita:
+  - "comparar notas"
+  - "tocar base"
+  - "retomar"
+  - "aprovechar"
+  - "sinergia"
+  - "avanzando"
+  - "revisitar"
+  - "conectar"
+- **Evita relleno de IA** - evita:
+  - "Seré breve"
+  - "Encantado de"
+  - "Solo quería..."
+  - "Pregunta rápida"
+  - "Espero que estés bien"
+  - "Quería contactarte porque"
+- **Lenguaje claro y directo** - escribe como una persona real
+- **Ponte en los zapatos del receptor** - ¿abrirías esto? ¿Te molestaría?
 
-### Binary CTA Examples
-Instead of "Let me know if you're interested" use:
-- "If you want to talk more, I'm available Thursday or Friday this week. If not, no pressure."
-- "If this still interests you, let me know. If not, I'll stop reaching out."
+### Ejemplos de CTA Binario
+En lugar de "Avísame si te interesa" usa:
+- "Si quieres hablar más, estoy disponible jueves o viernes esta semana. Si no, sin presión."
+- "Si esto todavía te interesa, avísame. Si no, dejaré de contactarte."
 
-## Self-Critique Checklist
+## Lista de Verificación de Autocrítica
 
-After writing, check each item:
-- [ ] Under 80 words?
-- [ ] Contains exactly ONE personalized hook specific to them?
-- [ ] Contains exactly ONE binary CTA (two options)?
-- [ ] References the Boston event (Pillar VC, March 24)?
-- [ ] Mentions one company from the menu?
-- [ ] No em dashes?
-- [ ] No corporate language (compare notes, circle back, etc.)?
-- [ ] No AI-ish filler (I'll keep this short, Happy to, Just wanted to, etc.)?
-- [ ] Would the receiver feel respected, not manipulated?
-- [ ] Reads like a real human wrote it?
-- [ ] Specific enough to stand out, not generic?
+Después de escribir, verifica cada elemento:
+- [ ] ¿Menos de 80 palabras?
+- [ ] ¿Contiene exactamente UN gancho personalizado específico a ellos?
+- [ ] ¿Contiene exactamente UN CTA binario (dos opciones)?
+- [ ] ¿Referencia el evento de Boston (Pillar VC, 24 de marzo)?
+- [ ] ¿Menciona una empresa del menú?
+- [ ] ¿Sin guiones largos?
+- [ ] ¿Sin lenguaje corporativo (comparar notas, retomar, etc.)?
+- [ ] ¿Sin relleno de IA (Seré breve, Encantado de, Solo quería, etc.)?
+- [ ] ¿Se sentiría el receptor respetado, no manipulado?
+- [ ] ¿Se lee como si un humano real lo escribió?
+- [ ] ¿Suficientemente específico para destacar, no genérico?
 
-## Output Format
+## Formato de Salida
 
-Provide the email in this format:
+Proporciona el correo en este formato:
 
 ```
-Subject: [Brief subject line]
+Asunto: [Línea de asunto breve]
 
-[Email body - 80 words max]
+[Cuerpo del correo - 80 palabras máximo]
 
 ---
-Self-Critique:
-[Brief notes on what makes this work and what could be improved]
+Autocrítica:
+[Notas breves sobre qué hace que esto funcione y qué podría mejorarse]
 ```
 
-## Example
+## Ejemplo
 
-User Input:
-- Attendee: "Michael Torres - Engineering Manager at CloudScale - asked about how AI agents handle code reviews during Q&A"
-- Company to mention: Nvidia
+Entrada del Usuario:
+- Asistente: "Michael Torres - Engineering Manager en CloudScale - preguntó sobre cómo los agentes de IA manejan revisiones de código durante el Q&A"
+- Empresa a mencionar: Nvidia
 
-Output:
+Salida:
 ```
-Subject: Good meeting you at the Boston event
+Asunto: Gusto conocerte en el evento de Boston
 
-Michael - enjoyed your question about AI code reviews at the event last week.
+Michael, disfruté tu pregunta sobre revisiones de código con IA en el evento la semana pasada.
 
-Would love to continue that conversation. Teams at companies like Nvidia have seen real improvements in review turnaround with autonomous agents. If that sounds worth exploring, happy to chat. If not, no hard feelings.
+Me encantaría continuar esa conversación. Equipos en empresas como Nvidia han visto mejoras reales en tiempos de revisión con agentes autónomos. Si eso suena valioso de explorar, encantado de charlar. Si no, sin problema.
 
-Best,
-[Your name]
+Saludos,
+[Tu nombre]
 
 ---
-Self-Critique: Hook (their specific question at event) is personalized. Binary CTA gives two clear paths. Company reference (Nvidia) is relevant. Under 80 words. No corporate speak. Direct follow-up, not pushy.
+Autocrítica: El gancho (su pregunta específica en el evento) está personalizado. El CTA binario da dos caminos claros. La referencia a la empresa (Nvidia) es relevante. Menos de 80 palabras. Sin lenguaje corporativo. Seguimiento directo, no agresivo.
 ```

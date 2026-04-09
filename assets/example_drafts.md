@@ -1,130 +1,130 @@
-# Example Drafts
+# Ejemplos de Borradores
 
-Good and bad examples to learn from.
+Buenos y malos ejemplos de los cuales aprender.
 
-## GOOD EXAMPLES
+## BUENOS EJEMPLOS
 
-### Praveen (Delta Dental Director)
+### Praveen (Director Delta Dental)
 
-Subject: Quick question
+Asunto: Pregunta rápida
 
 Praveen,
 
-How was your first year as Director at Delta Dental? You've been through the architecture, the management, now the leadership. That's rare.
+¿Cómo fue tu primer año como Director en Delta Dental? Has pasado por la arquitectura, la gestión, ahora el liderazgo. Eso es raro.
 
-I've reached out a few times but haven't heard back. Totally get how busy things get.
+Te he contactado varias veces pero no he recibido respuesta. Entiendo totalmente lo ocupadas que se ponen las cosas.
 
-We help teams like yours in highly regulated industries bring agents to legacy systems without risks. We are 100% OSS and work with some of the largest healthcare and banking organizations in the country. If that sounds useful, let's talk.
+Ayudamos a equipos como el tuyo en industrias altamente reguladas a traer agentes a sistemas legacy sin riesgos. Somos 100% código abierto y trabajamos con algunas de las organizaciones de salud y banca más grandes del país. Si eso suena útil, hablemos.
 
-If not, I'll stop reaching out.
+Si no, dejaré de contactarte.
 
 ---
-Why it works:
-- Question hook: "How was your first year..." shows genuine curiosity
-- Social proof: "100% OSS", "largest healthcare and banking orgs"
-- Value prop: "bring agents to legacy systems without risks" - specific to his domain
+Por qué funciona:
+- Gancho de pregunta: "¿Cómo fue tu primer año..." muestra curiosidad genuina
+- Prueba social: "100% código abierto", "organizaciones de salud y banca más grandes"
+- Propuesta de valor: "traer agentes a sistemas legacy sin riesgos" - específico a su dominio
 
-### Vishal (Rabobank DevSecOps)
+### Vishal (DevSecOps Rabobank)
 
-Subject: Quick question
+Asunto: Pregunta rápida
 
 Vishal,
 
-You wrote about embedding security vulnerability testing into pipelines. I imagine the false positives don't stop when you're trying to ship.
+Escribiste sobre incrustar pruebas de vulnerabilidad de seguridad en pipelines. Me imagino que los falsos positivos no paran cuando estás tratando de lanzar.
 
-I've reached out a few times but haven't heard back. Totally get how busy things get.
+Te he contactado varias veces pero no he recibido respuesta. Entiendo totalmente lo ocupadas que se ponen las cosas.
 
-We help teams like yours automate security fixes directly in code, so you're not wasting cycles on scanner noise. If that sounds useful, let's talk.
+Ayudamos a equipos como el tuyo a automatizar correcciones de seguridad directamente en código, para que no estés desperdiciando ciclos en ruido de escáner. Si eso suena útil, hablemos.
 
-If not, I'll stop reaching out.
+Si no, dejaré de contactarte.
 
 ---
-Why it works:
-- Hook: References his actual words about security testing
-- "False positives don't stop when you're trying to ship" - specific pain
-- Value prop: "automate security fixes in code" - specific to OpenHands
+Por qué funciona:
+- Gancho: Referencia sus palabras reales sobre pruebas de seguridad
+- "Los falsos positivos no paran cuando estás tratando de lanzar" - dolor específico
+- Propuesta de valor: "automatizar correcciones de seguridad en código" - específico a OpenHands
 
-### Yolanda (Bloomberg Manager)
+### Yolanda (Gerente Bloomberg)
 
-Subject: Quick question
+Asunto: Pregunta rápida
 
 Yolanda,
 
-I imagine that managing engineers at Bloomberg you see the whole picture and where AI fits in.
+Me imagino que gestionando ingenieros en Bloomberg ves el panorama completo y dónde encaja la IA.
 
-We help engineering managers at big 4 banks add team capacity with autonomous AI agents without adding risk. 100% OSS. Sandboxed. Locally hosted on internal infrastructure.
+Ayudamos a gerentes de ingeniería en los 4 grandes bancos a añadir capacidad al equipo con agentes de IA autónomos sin añadir riesgo. 100% código abierto. En sandbox. Alojado localmente en infraestructura interna.
 
-I've reached out a few times but haven't heard back.
+Te he contactado varias veces pero no he recibido respuesta.
 
-If this is useful, let's talk. If not, I'll stop reaching out.
-
----
-Why it works:
-- "I imagine..." frames assumption as speculation, not fact
-- Financial services specific: "big 4 banks", "sandboxed, locally hosted"
-- No filler or bloated language
-
-## BAD EXAMPLES
-
-### Generic (What NOT to do)
-
-Subject: Quick question
-
-Hi [Name],
-
-I hope this email finds you well. I've been following your career and I'm impressed by your background at [Company].
-
-I'm reaching out because I wanted to see if you'd be interested in scheduling a call to discuss how we can help you [generic value prop].
-
-Please don't hesitate to reach out if you're interested. Looking forward to connecting.
-
-Best,
-[Your name]
+Si esto es útil, hablemos. Si no, dejaré de contactarte.
 
 ---
-Why it fails:
-- "I hope this email finds you well" - AI-ism
-- "I'm reaching out because..." - template
-- No specific hook from their profile
-- Could work for ANY person - not personalized
-- 84% of AI-written emails like this get no response
+Por qué funciona:
+- "Me imagino..." enmarca suposición como especulación, no como hecho
+- Específico de servicios financieros: "4 grandes bancos", "sandbox, alojado localmente"
+- Sin relleno o lenguaje inflado
 
-### Force-Fit Personalization
+## MALOS EJEMPLOS
 
-Subject: Quick question
+### Genérico (Qué NO hacer)
 
-[Name],
+Asunto: Pregunta rápida
 
-I noticed you've been at [Company] for [X] years. That's impressive dedication!
+Hola [Nombre],
 
-I've reached out a few times but haven't heard back.
+Espero que este correo te encuentre bien. He estado siguiendo tu carrera y estoy impresionado por tu trayectoria en [Empresa].
 
-[Generic value prop about "faster shipping" or "adding capacity"]
+Te estoy contactando porque quería ver si estarías interesado en programar una llamada para discutir cómo podemos ayudarte [propuesta de valor genérica].
 
-If not, I'll stop reaching out.
+No dudes en contactarme si te interesa. Esperando poder conectar.
 
----
-Why it fails:
-- Tenure observation is generic and doesn't say anything about THEM
-- "That's impressive dedication!" - forced, not genuine
-- The value prop isn't specific to their industry
-- Would make them think: "another vendor who doesn't get it"
-
-### Bloated Language
-
-Subject: Quick question
-
-Hi [Name],
-
-I wanted to take a moment to circle back and see if you'd had a chance to consider my previous outreach. I understand you're likely very busy with your responsibilities at [Company], and I just wanted to follow up to see if there might be an opportunity to connect.
-
-Please let me know if this is of interest, or if not, I'll make sure not to bother you further.
-
-Best,
-[Your name]
+Saludos,
+[Tu nombre]
 
 ---
-Why it fails:
-- "take a moment to circle back" - corporate speak
-- "I understand you're likely very busy" - filler
-- Would they think this is written by a real person? No.
+Por qué falla:
+- "Espero que este correo te encuentre bien" - frase de IA
+- "Te estoy contactando porque..." - plantilla
+- Sin gancho específico de su perfil
+- Podría funcionar para CUALQUIER persona - no personalizado
+- 84% de correos escritos por IA como este no obtienen respuesta
+
+### Personalización Forzada
+
+Asunto: Pregunta rápida
+
+[Nombre],
+
+Noté que has estado en [Empresa] por [X] años. ¡Esa es una dedicación impresionante!
+
+Te he contactado varias veces pero no he recibido respuesta.
+
+[Propuesta de valor genérica sobre "lanzar más rápido" o "añadir capacidad"]
+
+Si no, dejaré de contactarte.
+
+---
+Por qué falla:
+- La observación de permanencia es genérica y no dice nada sobre ELLOS
+- "¡Esa es una dedicación impresionante!" - forzado, no genuino
+- La propuesta de valor no es específica a su industria
+- Los haría pensar: "otro vendedor que no entiende"
+
+### Lenguaje Inflado
+
+Asunto: Pregunta rápida
+
+Hola [Nombre],
+
+Quería tomar un momento para retomar y ver si has tenido oportunidad de considerar mi contacto previo. Entiendo que probablemente estás muy ocupado con tus responsabilidades en [Empresa], y solo quería hacer seguimiento para ver si podría haber una oportunidad de conectar.
+
+Por favor avísame si esto es de interés, o si no, me aseguraré de no molestarte más.
+
+Saludos,
+[Tu nombre]
+
+---
+Por qué falla:
+- "tomar un momento para retomar" - lenguaje corporativo
+- "Entiendo que probablemente estás muy ocupado" - relleno
+- ¿Pensarían que esto está escrito por una persona real? No.
